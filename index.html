@@ -777,5 +777,39 @@
             });
         });
     </script>
+        <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/27604881413" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/30 hover:scale-110 transition-all duration-300 z-40 group"
+       aria-label="Chat on WhatsApp">
+        <i data-feather="message-circle" class="w-7 h-7 text-white"></i>
+        <div class="absolute -top-12 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            Chat with me on WhatsApp
+        </div>
+    </a>
+
+    <script>
+        // Re-initialize Feather Icons to include the WhatsApp icon
+        feather.replace();
+        
+        // WhatsApp chat initialization (optional enhanced functionality)
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappBtn = document.querySelector('a[href*="wa.me"]');
+            
+            // Add click tracking (optional)
+            whatsappBtn.addEventListener('click', function() {
+                console.log('WhatsApp chat initiated');
+                // You can add analytics here if needed
+            });
+            
+            // Ensure WhatsApp button stays on top of Vanta.js
+            const vantaContainer = document.getElementById('vanta-bg');
+            if (vantaContainer) {
+                whatsappBtn.style.zIndex = '9999';
+            }
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
